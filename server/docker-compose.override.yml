@@ -1,0 +1,11 @@
+# This file is automatically loaded by docker-compose
+# Use it for local development overrides
+version: '3.8'
+
+services:
+  app:
+    environment:
+      - LOG_LEVEL=debug
+    volumes:
+      - .:/app
+      - /app/tmp  # Exclude tmp directory from volume mount
